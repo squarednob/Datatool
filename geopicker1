@@ -1,0 +1,6 @@
+from geopy import geocoders  
+
+def pick(query):
+	g = geocoders.GoogleV3()
+	place, (lat, lng) = g.geocode(query)  
+	print "%s: %.5f, %.5f" % (place, lat, lng)
